@@ -2,7 +2,7 @@
   "name": "accounting",
   "version": "0.1.0",
   "proxy": "http://localhost:8001",
-  "homepage": "https://github.com/Avinashdaddoo/accounting",
+  "homepage": "https://github.com/Avinashdaddoo/accounting/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
