@@ -1,11 +1,20 @@
 
 import './App.css';
 
+import MyRouter from './router';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+
 function App() {
   return (
-    <div className="App">
-      <h1>Avinash Daddoo</h1>
+    <div>
+      
+  <Navbar />
 
+    <MyRouter />
+
+    <Footer />
     </div>
   );
 }
