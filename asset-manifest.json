@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Avinashdaddoo/accounting/static/css/main.682027ba.css",
+    "main.js": "/Avinashdaddoo/accounting/static/js/main.cd0db946.js",
+    "index.html": "/Avinashdaddoo/accounting/index.html",
+    "main.682027ba.css.map": "/Avinashdaddoo/accounting/static/css/main.682027ba.css.map",
+    "main.cd0db946.js.map": "/Avinashdaddoo/accounting/static/js/main.cd0db946.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.682027ba.css",
+    "static/js/main.cd0db946.js"
+  ]
+}
