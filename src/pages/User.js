@@ -26,7 +26,7 @@ function User(){
                         
                         <div className="card-header d-flex justify-content-between">
                         <h4 className="d-flex mx-3">Users</h4>  
-                        <Link type="submit" to="" className="btn btn-primary mx-3"><i className="fa fa-plus"></i>Add</Link>
+                        <Link type="submit" to="/adduser" className="btn btn-primary mx-3"><i className="fa fa-plus"></i>Add</Link>
                                       
                             
                         </div>
@@ -35,28 +35,35 @@ function User(){
                                 <thead>
                                     <tr >
                                         <th scope="col">ID</th>
-                                        <th scope="col" style={{width: '40%'}}>Name</th>
+                                        <th scope="col" style={{width: '20%'}}>Name</th>
                                         <th scope="col" style={{width: '10%'}}>Email</th>
                                         <th scope="col" style={{width: '10%'}}>Mobile</th>
                                         <th scope="col" style={{width: '20%'}}>Address</th>
-                                        <th scope="col" style={{width: '20%'}}>Description</th>
-                                        <th scope="col" style={{width: '20%'}}>Action</th>
+                                        <th scope="col" style={{width: '20%'}}>Department</th>
+                                        <th scope="col" style={{width: ''}}>Description</th>
+                                        <th scope="col" style={{width: ''}}>Action</th>
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Avinash</td>
-                                        <td>avinash@gmail.com</td>
-                                        <td>58348015</td>
-                                        <td></td>
-                                        <td></td>
+                                    {users && users.map((item, index) => {
+                                        return (
+                                    <tr key={index}>
+                                        <th scope="row">{index + 1}</th>
+                                        <td>{item.name}</td>
+                                        <td>{item.email}</td>
+                                        <td>{item.mobile}</td>
+                                        <td>{item.add}</td>
+                                        <td>{item.work}</td>
+                                        <td>{item.desc}</td>
                                         <td>
-                                            <Link to=""><i class="fa fa-pencil mr-2 text-secondary"></i></Link>
-                                            <Link to=""><i class="fa fa-trash mx-2 text-danger"></i></Link>
+                                            <Link to={`/viewuser/${item.id}`}><i className="fa fa-eye mx-2 text-tertiary"></i></Link>
+                                            <Link to={`/updateuser/${item.id}`}><i className="fa fa-pencil mr-2 text-secondary"></i></Link>
+                                            <Link to={`/deleteuser/${item.id}`}><i className="fa fa-trash mx-2 text-danger"></i></Link>
                                         </td>
                                     </tr>
+                                    )
+                                    })}
                                 </tbody>
                             </table>
 
