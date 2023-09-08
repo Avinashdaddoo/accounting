@@ -5,8 +5,9 @@ import axios from 'axios';
 
 function AccountType(){
     const [accounttype, setAccountType] = useState([]);
+    const baseurl = "http://localhost:8001/";
     useEffect(()=>{
-        axios.get(`http://localhost:8001/`).then(res =>setAccountType(res.accounttype)).catch(err => console.log(err));
+        axios.get(`http://localhost:8001/accounttype`).then(res =>setAccountType(res.accounttype)).catch(err => console.log(err));
     }, [])
     return (
         <div className="container">
